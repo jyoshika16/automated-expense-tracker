@@ -118,6 +118,15 @@ The email subject is processed to extract:
 - **Amount** — numeric transaction amount
 - **Date** — current date and time
 
+  ## 🔮 Future Improvements
+
+- Support multiple transaction email formats
+- Automatically categorize expenses such as Food, Travel, Shopping, and Bills
+- Add monthly and weekly expense summaries
+- Create dashboards for expense visualization
+- Add support for multiple bank accounts
+- Use AI-based classification for transaction categories
+
 For example:
 
 `₹500 debited from your account`

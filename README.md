@@ -33,7 +33,41 @@ Google Sheets
 
 An n8n-based automation that extracts expense information from Gmail transaction emails and automatically records it in Google Sheets.
 
+## ⚙️ Technical Implementation
 
+### 1. Gmail Trigger
+
+The workflow uses the Gmail Trigger node to monitor incoming transaction emails.
+
+### 2. Data Processing
+
+The Edit Fields node processes the incoming email data.
+
+The transaction amount is extracted from the email subject using a regular expression.
+
+Example:
+
+`₹500 debited from your account`
+
+→ `500`
+
+The workflow also captures the transaction description and current date/time.
+
+### 3. Google Sheets
+
+The processed data is mapped into Google Sheets:
+
+| Field | Source |
+|---|---|
+| Date | Current date/time |
+| Amount | Extracted transaction amount |
+| Description | Gmail subject |
+
+### Example Output
+
+| Date | Amount | Description |
+|---|---:|---|
+| Current date/time | 500 | ₹500 debited from your account |
 
 ## How It Works
 

@@ -1,4 +1,27 @@
 # 🚀 Automated Expense Tracker
+## 📌 Project Overview
+
+This project automates personal expense tracking using n8n.
+
+Instead of manually entering every transaction into a spreadsheet, the workflow monitors Gmail transaction emails, extracts the transaction amount and details, and automatically records them in Google Sheets.
+
+### 🔄 Workflow
+
+Gmail Transaction Email
+↓
+Gmail Trigger
+↓
+Edit Fields
+↓
+Google Sheets
+
+### 🛠️ Tech Stack
+
+- n8n
+- Gmail
+- Google Sheets
+- JavaScript Expressions
+- Regular Expressions
 
 > Automatically track expenses from Gmail transaction emails using n8n and Google Sheets.
 

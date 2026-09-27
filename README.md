@@ -1,3 +1,9 @@
+# 🚀 Automated Expense Tracker
+
+> Automatically track expenses from Gmail transaction emails using n8n and Google Sheets.
+
+![Workflow](workflow.png)
+
 \# Automated Expense Tracker
 
 

@@ -12,23 +12,41 @@ An n8n-based automation that extracts expense information from Gmail transaction
 
 
 
-\## How It Works
+## How It Works
 
+The workflow automatically converts transaction emails into structured expense records.
 
+### Workflow
 
 Gmail Transaction Email
-
-&#x20;       ↓
-
+        ↓
 Gmail Trigger
-
-&#x20;       ↓
-
+        ↓
 Edit Fields
-
-&#x20;       ↓
-
+        ↓
 Google Sheets
+
+### 1. Gmail Trigger
+
+The workflow monitors Gmail for incoming transaction emails.
+
+### 2. Edit Fields
+
+The email subject is processed to extract:
+
+- **Description** — original transaction subject
+- **Amount** — numeric transaction amount
+- **Date** — current date and time
+
+For example:
+
+`₹500 debited from your account`
+
+becomes:
+
+```text
+Amount: 500
+Description: ₹500 debited from your account
 
 
 

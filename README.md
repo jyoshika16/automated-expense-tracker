@@ -71,6 +71,27 @@ The processed data is mapped into Google Sheets:
 |---|---:|---|
 | Current date/time | 500 | ₹500 debited from your account |
 
+## 🚀 Setup
+
+### Prerequisites
+
+- n8n
+- Gmail account
+- Google Sheets account
+
+### Installation
+
+1. Download or clone this repository.
+2. Open n8n.
+3. Import `automated-expense-tracker.json`.
+4. Connect your own Gmail credentials.
+5. Connect your own Google Sheets credentials.
+6. Select your Google Spreadsheet and worksheet.
+7. Verify the column mappings.
+8. Activate the workflow.
+
+> **Note:** This repository contains a reusable workflow template. Personal Gmail, Google Sheets, and OAuth credentials are not included.
+
 ## How It Works
 
 The workflow automatically converts transaction emails into structured expense records.

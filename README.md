@@ -4,12 +4,6 @@
 
 ![Workflow](workflow.png)
 
-\# Automated Expense Tracker
-
-
-
-An n8n-based automation that extracts expense information from Gmail transaction emails and automatically records it in Google Sheets.
-
 ## 📌 Project Overview
 
 This project automates personal expense tracking using n8n.
@@ -18,12 +12,12 @@ Instead of manually entering every transaction into a spreadsheet, the workflow 
 
 ### 🔄 Workflow
 
-Gmail Transaction Email
-↓
-Gmail Trigger
-↓
-Edit Fields
-↓
+Gmail Transaction Email  
+↓  
+Gmail Trigger  
+↓  
+Edit Fields  
+↓  
 Google Sheets
 
 ### 🛠️ Tech Stack
@@ -34,6 +28,19 @@ Google Sheets
 - JavaScript Expressions
 - Regular Expressions
 
+## 📸 Screenshots
+
+### Gmail Trigger
+
+![Gmail Trigger](gmail-trigger.png)
+
+### Data Processing
+
+![Data Processing](data_processing.png)
+
+### Google Sheets Output
+
+![Google Sheets Output](google_sheets_output.png)
 
 ## ⚙️ Technical Implementation
 
@@ -83,7 +90,7 @@ The processed data is mapped into Google Sheets:
 
 1. Download or clone this repository.
 2. Open n8n.
-3. Import `automated-expense-tracker.json`.
+3. Import the workflow JSON file.
 4. Connect your own Gmail credentials.
 5. Connect your own Google Sheets credentials.
 6. Select your Google Spreadsheet and worksheet.
@@ -92,33 +99,19 @@ The processed data is mapped into Google Sheets:
 
 > **Note:** This repository contains a reusable workflow template. Personal Gmail, Google Sheets, and OAuth credentials are not included.
 
-## How It Works
+## 🎯 Project Output
 
-The workflow automatically converts transaction emails into structured expense records.
+The workflow automatically adds detected transaction details to Google Sheets.
 
-### Workflow
+Example:
 
-Gmail Transaction Email
-        ↓
-Gmail Trigger
-        ↓
-Edit Fields
-        ↓
-Google Sheets
+| Date | Amount | Description |
+|---|---:|---|
+| 2026-09-27 | ₹500 | ₹500 debited from your account |
 
-### 1. Gmail Trigger
+This eliminates the need to manually enter each transaction into a spreadsheet.
 
-The workflow monitors Gmail for incoming transaction emails.
-
-### 2. Edit Fields
-
-The email subject is processed to extract:
-
-- **Description** — original transaction subject
-- **Amount** — numeric transaction amount
-- **Date** — current date and time
-
-  ## 🔮 Future Improvements
+## 🔮 Future Improvements
 
 - Support multiple transaction email formats
 - Automatically categorize expenses such as Food, Travel, Shopping, and Bills
@@ -127,133 +120,8 @@ The email subject is processed to extract:
 - Add support for multiple bank accounts
 - Use AI-based classification for transaction categories
 
-For example:
+## 💡 Key Learning
 
-`₹500 debited from your account`
+This project helped me understand how workflow automation can connect different services and reduce repetitive manual tasks.
 
-becomes:
-
-```text
-Amount: 500
-Description: ₹500 debited from your account
-
-
-
-\### Workflow
-
-
-
-1\. \*\*Gmail Trigger\*\*
-
-&#x20;  - Monitors incoming Gmail messages.
-
-&#x20;  - Detects transaction emails.
-
-
-
-2\. \*\*Edit Fields\*\*
-
-&#x20;  - Extracts the transaction subject.
-
-&#x20;  - Extracts the numeric expense amount using a regular expression.
-
-&#x20;  - Generates the current date/time.
-
-
-
-3\. \*\*Google Sheets\*\*
-
-&#x20;  - Appends the processed expense to a Google Sheet.
-
-
-
-\## Example
-
-
-
-Input email subject:
-
-
-
-`₹500 debited from your account`
-
-
-
-The workflow extracts:
-
-
-
-| Field | Value |
-
-|---|---|
-
-| Date | Current date/time |
-
-| Amount | 500 |
-
-| Description | ₹500 debited from your account |
-
-
-
-\## Tech Stack
-
-
-
-\- n8n
-
-\- Gmail
-
-\- Google Sheets
-
-\- JavaScript Expressions
-
-\- Regular Expressions
-
-
-
-\## Setup
-
-
-
-1\. Install and run n8n.
-
-2\. Import `automated-expense-tracker.json`.
-
-3\. Create your own Gmail OAuth credential.
-
-4\. Create your own Google Sheets OAuth credential.
-
-5\. Select your Gmail account.
-
-6\. Select your Google Spreadsheet and worksheet.
-
-7\. Configure the required column mappings.
-
-8\. Activate the workflow.
-
-
-
-\## Important
-
-
-
-The workflow JSON included in this repository is a sanitized, reusable version.
-
-
-
-It does not contain the original Google account credentials or personal spreadsheet connection.
-
-
-
-Users must configure their own Gmail and Google Sheets credentials before running the workflow.
-
-
-
-\## Workflow Structure
-
-
-
-```text
-
-Gmail Trigger → Edit Fields → Google Sheets
-
+I learned how to work with Gmail triggers, data transformation, JavaScript expressions, regular expressions, OAuth authentication, and Google Sheets automation.
